@@ -1,0 +1,40 @@
+{
+  "name": "BMI-Calculator",
+  "version": "1.0.0",
+  "description": "Simple body mass index calculator tool",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/riccar/bmi-calculator.git"
+  },
+  "author": "Ricardo Carballo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/riccar/bmi-calculator/issues"
+  },
+  "homepage": "https://github.com/riccar/bmi-calculator#readme",
+  "devDependencies": {
+    "babel-core": "^6.2.1",
+    "babel-loader": "^6.2.0",
+    "babel-preset-es2015": "^6.1.18",
+    "babel-preset-react": "^6.1.18",
+    "browser-sync": "^2.23.1",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-postcss": "^7.0.1",
+    "gulp-rev": "^8.1.1",
+    "gulp-uglify": "^3.0.0",
+    "gulp-usemin": "^0.3.28",
+    "gulp-watch": "^4.3.11",
+    "jquery": "^2.2.1",
+    "postcss-import": "^11.0.0",
+    "webpack": "^1.12.9"
+  },
+  "dependencies": {
+    "babel-preset-stage-1": "^6.1.18",
+    "normalize.css": "^7.0.0",
+    "react": "^0.14.3",
+    "react-dom": "^0.14.3"
+  }
+}
