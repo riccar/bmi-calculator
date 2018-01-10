@@ -117,7 +117,7 @@
 	      return _react2.default.createElement(
 	        'div',
 	        { className: 'bmi-calculator group' },
-	        'Body Max Index (BMI) calculator',
+	        'Body Mass Index (BMI) calculator',
 	        _react2.default.createElement(_BmiForm2.default, { OnSubmitForm: function OnSubmitForm(width, height) {
 	            return _this2.CalculateBmi(width, height);
 	          } }),
