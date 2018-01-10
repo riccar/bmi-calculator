@@ -30,14 +30,14 @@ class BmiForm extends Component {
     var name = target.name;
     var value = target.value;
    
+    //Prevent number values smaller than 1. 
     if (name == 'weight' && value <= 0) value = "";
     if (name == 'height' && value <= 0) value = "";
 
     this.setState({
       [name]: value
     })
-    console.log(this.state);
-
+    
     //this.props.OnSubmitForm(this.state.weight, this.state.height);
   }
 
@@ -50,8 +50,7 @@ class BmiForm extends Component {
     this.setState({
       [name]: value
     })
-    console.log(this.state);
-
+    
     this.props.OnSubmitForm(this.state.weight, this.state.height);
     event.preventDefault();
   }
