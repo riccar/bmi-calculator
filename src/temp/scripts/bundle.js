@@ -116,7 +116,8 @@
 
 	      return _react2.default.createElement(
 	        'div',
-	        { className: 'bmi-calculator' },
+	        { className: 'bmi-calculator group' },
+	        'Body Max Index (BMI) calculator',
 	        _react2.default.createElement(_BmiForm2.default, { OnSubmitForm: function OnSubmitForm(width, height) {
 	            return _this2.CalculateBmi(width, height);
 	          } }),
@@ -19895,6 +19896,9 @@
 	      var name = target.name;
 	      var value = target.value;
 
+	      if (name == 'weight' && value <= 0) value = "";
+	      if (name == 'height' && value <= 0) value = "";
+
 	      this.setState(_defineProperty({}, name, value));
 	      console.log(this.state);
 
@@ -19923,17 +19927,18 @@
 	      //as in classic html use the onChange property of the element to define the onChange function and provide the this.<functionName> defined in the class (within curly bracers)
 	      return _react2.default.createElement(
 	        'div',
-	        null,
+	        { className: 'bmi-form' },
 	        _react2.default.createElement(
 	          'form',
 	          { onSubmit: this.handleSubmit },
 	          _react2.default.createElement(
 	            'label',
 	            null,
-	            'Your weight:',
+	            'Your weight in kg:',
 	            _react2.default.createElement('input', {
 	              name: 'weight',
 	              type: 'number',
+	              step: '.01',
 	              required: true,
 	              value: this.state.weight
 	              //event.target.value has the input value
@@ -19942,10 +19947,11 @@
 	          _react2.default.createElement(
 	            'label',
 	            null,
-	            'Your height:',
+	            'Your height in cm:',
 	            _react2.default.createElement('input', {
 	              name: 'height',
 	              type: 'number',
+	              step: '.01',
 	              required: true,
 	              value: this.state.height
 	              //event.target.value has the input value
@@ -32360,7 +32366,7 @@
 	  if (!bmi) {
 	    return _react2.default.createElement(
 	      "div",
-	      null,
+	      { className: "result" },
 	      "Calculating..."
 	    );
 	  }
@@ -32369,12 +32375,8 @@
 	  return _react2.default.createElement(
 	    "div",
 	    { className: "result" },
-	    _react2.default.createElement(
-	      "p",
-	      null,
-	      "Your BMI is: ",
-	      bmi
-	    )
+	    "Your BMI is: ",
+	    bmi
 	  );
 	}; //Function based component Result that show the BMI result on the screen
 

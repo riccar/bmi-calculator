@@ -27,9 +27,12 @@ class BmiForm extends Component {
   handleInputChange(event) {
     
     const target = event.target;
-    const name = target.name;
-    const value = target.value;
+    var name = target.name;
+    var value = target.value;
    
+    if (name == 'weight' && value <= 0) value = "";
+    if (name == 'height' && value <= 0) value = "";
+
     this.setState({
       [name]: value
     })
@@ -57,23 +60,25 @@ class BmiForm extends Component {
   render() {
     //as in classic html use the onChange property of the element to define the onChange function and provide the this.<functionName> defined in the class (within curly bracers)
     return (
-      <div>
+      <div className="bmi-form">
         <form onSubmit={this.handleSubmit}>
           <label>
-            Your weight:
+            Your weight in kg:
             <input
               name="weight"
               type="number"
-              required={true} 
+              step=".01"
+              required={true}
               value={this.state.weight}
               //event.target.value has the input value
               onChange={this.handleInputChange} />
           </label>
           <label>
-            Your height:
+            Your height in cm:
             <input
               name="height" 
               type="number"
+              step=".01"
               required={true} 
               value={this.state.height}
               //event.target.value has the input value

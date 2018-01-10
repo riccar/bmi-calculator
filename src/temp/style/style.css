@@ -446,6 +446,27 @@ template {
   display: none;
 }
 
+.bmi-calculator {
+  font-family: Tahoma, sans-serif;
+  font-size: 100%;
+  margin: 0 auto;
+  margin-top: 15px;
+  max-width: 290px;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: #bebd5d;
+  padding-top: 5px;
+  text-align: center;
+  box-shadow: 8px 8px 4px -6px #ddd;
+}
+
+@media screen and (min-width: 1024px) {
+  .bmi-calculator {
+    max-width: 550px;
+  }
+}
+
 .group:before, .group:after {
   content: "";
   display: table;
@@ -453,5 +474,62 @@ template {
 
 .group:after {
   clear: both;
+}
+
+form {
+  background-color: #ECECEC;
+  padding: 20px;
+  text-align: left;
+  margin-top: 5px;
+}
+
+@media screen and (min-width: 1024px) {
+  form {
+    float: left;
+    max-width: 290px;
+  }
+}
+
+input[type="text"], input[type="number"], 
+select {
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+  padding: 0 10px;
+  height: 30px;
+  margin-bottom: 15px;
+  border: 1px solid #CDCDCD;
+  outline: none;
+}
+
+input[type="text"]:focus, input[type="number"]:focus {
+  border: 1px solid #869960;
+  /*Create inside shadow for the text field in focus. 2px horizontal and vertical offset and 2px blur*/
+  box-shadow: inset 2px 2px 2px rgba(0, 0, 0, .10);
+}
+
+input[type="submit"] {
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+  background-color: #869960;
+  color: #FFF;
+  padding: 10px 0;
+  border: 1px solid #798A56;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  outline: none;
+}
+
+input[type="submit"]:hover, input[type="submit"]:focus {
+  border: 1px solid #535E3B;
+  background-color: #798A56;
+}
+
+.result {
+  height: 60px;
+  text-align: center;
+  padding-top: 35px;
+  background-color: #bebd5d
 }
 

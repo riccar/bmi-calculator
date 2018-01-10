@@ -31,7 +31,8 @@ class BmiCalculator extends Component {
   render() {
 
     return (
-      <div className="bmi-calculator">
+      <div className="bmi-calculator group">
+        Body Max Index (BMI) calculator
         <BmiForm OnSubmitForm={(width, height) => this.CalculateBmi(width, height)} />
         <Result bmi={Math.round(this.state.bmi * 100) / 100} />
       </div>

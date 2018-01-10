@@ -6,13 +6,13 @@ import React from 'react';
 const Result = ({bmi}) => {
 
   if (!bmi) {
-    return <div>Calculating...</div>;
+    return <div className="result">Calculating...</div>;
   }
   
   //Return a simple JSX div with calculated BMI 
   return (
     <div className="result">
-      <p>Your BMI is: {bmi}</p>
+      Your BMI is: {bmi}
     </div>
   );
 };

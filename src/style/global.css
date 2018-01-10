@@ -1,3 +1,24 @@
+.bmi-calculator {
+  font-family: Tahoma, sans-serif;
+  font-size: 100%;
+  margin: 0 auto;
+  margin-top: 15px;
+  max-width: 290px;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: #bebd5d;
+  padding-top: 5px;
+  text-align: center;
+  box-shadow: 8px 8px 4px -6px #ddd;
+}
+
+@media screen and (min-width: 1024px) {
+  .bmi-calculator {
+    max-width: 550px;
+  }
+}
+
 .group:before, .group:after {
   content: "";
   display: table;
